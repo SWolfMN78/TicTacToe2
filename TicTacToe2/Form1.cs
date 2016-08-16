@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,10 @@ namespace TicTacToe2
         private void TTTGameBoard_Load(object sender, EventArgs e)
         {
             //main game board - here the application will call the methods needed to run.
+            String[] turns = new string[9] {"X","O","X","O","X","O","X","O","X"}; //an array to hold the turns
+            String currentTurn = "";
+
+
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -46,6 +51,18 @@ namespace TicTacToe2
             btn7.Text = "";
             btn8.Text = "";
             btn9.Text = "";
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //display basic information for the user to view.
+            MessageBox.Show("By Shawn Wolf", "Tic Tac Toe About");
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //additional means to handle closing the application.
+            Application.Exit();
         }
     }
 }
